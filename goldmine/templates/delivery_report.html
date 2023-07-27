@@ -1,0 +1,112 @@
+<!-- delivery_report.html 111 -->
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delivery Report</title>
+    <head>
+        <title>Delivery Report</title>
+        <style>
+            /* Define your CSS styles here */
+            table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 8px;
+                text-align: left;
+            }
+            th {
+                background-color: green;
+                color: white; /* Optional: Set the text color to white */
+            }
+            /* Additional styling for table */
+            .invoice-table {
+                margin-top: 20px;
+            }
+            .invoice-table table {
+                border-collapse: collapse;
+                width: 100%;
+            }
+            .invoice-table th, .invoice-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            .invoice-table th {
+                background-color: #4CAF50;
+                color: white;
+            }
+        </style>
+    </head>
+</head>
+<body>
+    <div class="panel">
+        <div class="flex flex-wrap justify-between gap-4 px-4">
+            <div class="mb-4 w-full" align="center">
+                    <div align="center">
+                        {% comment %} <img src="{% static 'images/logo-i.jpg' %}" alt="image">
+                        <img src="file:///home/omkar/Desktop/logo-c.jpg" alt="Image Description"> {% endcomment %}
+                        {% comment %} {{logo}} {% endcomment %}
+                        {% for i in logo %}
+                        <img src="{{i.image}}" alt="{{ image.title }}" style="width: 360px; height:70px">
+                    
+                        {% endfor %}
+
+                    </div>
+                    <div class="mt-6 space-y-1 text-gray-500 dark:text-gray-400">
+                        
+                        <div> <BR> <B>REGD.</B> 5/6, Rafi Mansion, Corner of 28th Road, Near Tavaa Restaurant, Bandra – West, Mumbai – 400050.</div>
+                        <div> <B>TEL:</B> 61649912 / 13 / 14 / 15 / 61649991 </div>  
+                        
+                    </div>
+                </div>
+        </div>
+    </div>
+    <h1 style="text-align: center;"><b>Delivery Runsheet Report</b> </h1>
+
+    
+   
+    <div class="invoice-table">
+        <table id="myTable" class="whitespace-nowrap dataTable-table">
+            <thead>
+                <tr>
+                    <th style="width: 10%;">Sr No.</th>
+                    <th style="width: 15%;">Date</th>
+                    <th style="width: 20%;">Branch</th>
+                    <th style="width: 20%;">Vehicle No.</th>
+                    <th style="width: 20%;">From Location</th>
+                    <th style="width: 15%;">To Location</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in delivery_runs %}
+                {% if not branch_name or data.s_Branch == branch_name %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ data.s_Date }}</td>
+                    <td>{{ data.s_Branch }}</td>
+                    <td>{{ data.s_vehicle_number }}</td>
+                    <td>{{ data.s_From }}</td>
+                    <td>{{ data.s_To }}</td>
+                </tr>
+                
+                {% endif %}
+                {% endfor %}
+                 <tr>
+    <td colspan="6" valign="top"> 
+	<div class="grid grid-cols-1 gap-3 sm:grid-cols-3"> 
+	<div style = "display: inline-block"><B>Prepared by &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Checked by</B></div>
+   
+    {% comment %} <div> <B>Checked by</B></div> {% endcomment %}
+    <div style = "display: inline-block; " ><B>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GOLDMINE LOGISTICS (INDIA) PVT. LTD.</B> <br><br><br><br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Authorised Signatory </div> 
+    </td>
+    </tr>
+
+            </tbody>
+        </table>
+    </div>
+               
+</body>
+</html>

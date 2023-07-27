@@ -1,0 +1,92 @@
+[
+    {
+        "model":"goldmineApp.Group",
+        "pk":"1",
+        "fields":{
+            "s_Group_Name":"Bank Account",
+            "s_Date":"2023-04-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"2",
+        "fields":{
+            "s_Group_Name":"Bank OCC A/c",
+            "s_Date":"2023-05-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"3",
+        "fields":{
+            "s_Group_Name":"Bank ODD A/c",
+            "s_Date":"2023-06-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"4",
+        "fields":{
+            "s_Group_Name":"Branch / Division",
+            "s_Date":"2023-06-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"5",
+        "fields":{
+            "s_Group_Name":"Captial Account",
+            "s_Date":"2023-07-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"6",
+        "fields":{
+            "s_Group_Name":"Cash In Hand",
+            "s_Date":"2023-08-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"7",
+        "fields":{
+            "s_Group_Name":"Current Assets",
+            "s_Date":"2023-09-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"8",
+        "fields":{
+            "s_Group_Name":"Current Liabilities",
+            "s_Date":"2023-10-13",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"9",
+        "fields":{
+            "s_Group_Name":"Deposit (Assets)",
+            "s_Date":"2023-04-11",
+            "s_Status":"0"
+        }
+    },
+    {
+        "model":"goldmineApp.Group",
+        "pk":"10",
+        "fields":{
+            "s_Group_Name":"Duties & Taxes",
+            "s_Date":"2023-04-23",
+            "s_Status":"0"
+        }
+    }
+]

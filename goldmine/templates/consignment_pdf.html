@@ -1,0 +1,165 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Goldmine Logistics (India) Pvt. Ltd. </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="{% static 'appassets/css/perfect-scrollbar.min.css' %}" />
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'appassets/css/style.css' %}" />
+    <link defer rel="stylesheet" type="text/css" media="screen" href="{% static 'appassets/css/animate.css' %}" />
+    <script src="{% static 'appassets/js/perfect-scrollbar.min.js' %}"></script>
+    <script defer src="{% static 'appassets/js/popper.min.js' %}"></script>
+    <script defer src="{% static 'appassets/js/tippy-bundle.umd.min.js' %}"></script>
+    <script defer src="{% static 'appassets/js/sweetalert.min.js' %}"></script>
+</head>
+
+
+    <body>
+       
+                        <div class="panel">
+                            <div class="flex flex-wrap justify-between gap-4 px-4 px-58">
+                                <div class="mb-4 w-full" align="center">
+                                        <div align="center">
+                                            <img src="{% static 'images/logo-c.jpg'%}" alt="image">
+                                        </div>
+                                        <div class="mt-6 space-y-1 text-gray-500 dark:text-gray-400">
+                                            <div><B>CIN: U60100MH2005PTC152721</B> <BR> <B>REGD.</B> 5/6, Rafi Mansion, Corner of 28th Road, Near Tavaa Restaurant, Bandra – West, Mumbai – 400050.</div>
+                                            <div> <B>TEL:</B> 61649912 / 13 / 14 / 15 / 61649991 </div> <div class="lrheading">Consignment pdf</div>
+                                            
+                                        </div>
+                                    </div>
+                            </div>
+                            
+
+                           
+                            
+								<div class="table-responsive mt-6">
+                                <table class="table-striped">
+                                 
+  <tr>
+    <td width="30%" align="left" valign="top" style="text-align: left;">
+	
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-1">
+	<div><strong>Inv/ Chl No.: 52458548</strong></div>
+    <div><strong>Inv/ Chl ₹ : {{obj.i_Grant_Total}}</strong></div>
+    <div><strong>PAN: </strong> ASDF254GH</div>
+    <div><strong>GST: </strong> FGHD25478562566</div>
+    <div><strong>CIN:</strong>02145856988552</div></div>
+    <hr>
+    
+	<div class="grid grid-cols-1 gap-4 sm:grid-cols-1" style="text-align:center;">
+    <div style="padding-top:200px; color:#ff0000;"><strong>Receiver's Signature &amp; Stamp</strong></div>
+    <div><B>Phone :</B> 022 58547858 </div>
+     
+      <div><B>Amount :</B> ₹ {{obj.i_Grant_Total}}</div>
+    <div><B>Pickup Services  :</B>022-24170245 / 46</div>
+    <div><B>Delivery Services :</B> 022-24770248 / 49</div>
+    
+  </div></td>
+    <td width="70%" align="center" valign="left"  style="text-align:right;"><table width="100%"   height="50%" border="1" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><strong>Form :</strong> {{obj.s_From}}</td>
+        <td><strong>To :</strong> {{obj.s_To}}</td>
+        <td><strong>Date :</strong> {{obj.Date}}</td>
+      </tr>
+      
+      <tr>
+        <td colspan="3"><strong>Consignee's Name &amp; Address : </strong>  {{obj.s_Consignee_Name}}, {{obj.s_Consignee_Address}}</td>
+        </tr>
+      <tr>
+        <td colspan="3">
+		        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div><strong>Consignee's GST : </strong> {{obj.s_Consignee_GST}}</div>
+            <div><strong>Consignee's PAN : </strong> 2548525AZPRF2</div></div>
+          </td>
+        </tr>
+      <tr>
+        <td colspan="3"><strong>Consignor's Name &amp; Address : </strong> {{obj.s_Consignor_Name}}, {{obj.s_Consignor_Address}} </td>
+      </tr>
+      <tr>
+        <td colspan="3"><div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div><strong>Consignor's GST :</strong> {{obj.s_Consignor_GST}}</div>
+           <div><strong>Consignor's  PAN : </strong> 24584ASD58</div></div>
+          </tr>
+      <tr>
+        <td colspan="3" style="padding: 15px 10px 0px 0px;"> 
+		<table class="consignmenttable" width="100%" border="1" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="25%"><strong>No of Articles</strong></td>
+            <td><strong>Description of Goods</strong></td>
+            <td width="15%"><strong>Weight Kgm</strong></td>
+            <td width="15%"><strong>Freight</strong></td>
+          </tr>
+          <tr>
+            <td rowspan="5" align="left" valign="top"> {{obj.i_No_of_Articles}}</td>
+            <td rowspan="5" align="left" valign="top"> {{obj.s_Description}}  <br> {{obj.s_Pay_Type}}</td>
+            <td>Actual Wt.</td>
+            <td>{{obj.i_Actual_Weight}}</td>
+          </tr>
+          <tr>
+            <td>Charged Wt.</td>
+            <td>{{obj.i_Charged_Weight}}</td>
+          </tr>
+          <tr>
+            <td>F.O.V.</td>
+            <td>{{obj.i_FOV}}</td>
+          </tr>
+          <tr>
+            <td>Docket Ch</td>
+            <td>{{obj.i_Docket_Charge}}</td>
+          </tr>
+          <tr>
+            <td>Grand Total</td>
+            <td>{{obj.i_Grant_Total}}</td>
+          </tr>
+        </table></td>
+      </tr>
+      <br><br>
+      <!-- <tr style="padding-bottom: 50px;">
+        <td colspan="0"><strong>Delhi: </strong>25525252 / 55 <strong>Pune:</strong> 25478958 59 <strong>Mumbai : </strong>5698745896 / 25845858 <em>Chennai:</em> 9658745856 / 25458962</td>
+      </tr> -->
+    </table></td>
+  </tr>     
+      </tr>
+
+        </table>
+</td>
+  </tr>
+
+  </table>
+  <p>Delhi: </strong>25525252 / 55 <strong>Pune:</strong> 25478958 59 <strong>Mumbai : </strong>5698745896 / 25845858 <em>Chennai:</em> 9658745856 / 25458962</p>
+
+  </div>
+                         
+  </div>
+                            
+
+                    <!-- start footer section -->
+                    <p class="pt-6 text-center dark:text-white-dark ltr:sm:text-left rtl:sm:text-right">
+                        © <span id="footer-year">2022</span>. Goldmine Logistics  All rights reserved.
+                    </p>
+                    <!-- end footer section -->
+                </div>
+            </div>
+        </div>
+
+        <script src="{% static 'appassets/js/alpine-collaspe.min.js' %}"></script>
+        <script src="{% static 'appassets/js/alpine-persist.min.js' %}"></script>
+        <script defer src="{% static 'appassets/js/alpine-ui.min.js' %}"></script>
+        <script defer src="{% static 'appassets/js/alpine-focus.min.js' %}"></script>
+        <script defer src="{% static 'appassets/js/alpine.min.js' %}"></script>
+        <script src="{% static 'appassets/js/custom.js' %}"></script>
+        
+    </body>
+
+</html>
